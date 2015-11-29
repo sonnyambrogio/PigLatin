@@ -12,6 +12,7 @@
 		E0A42DEE1BE57DD100EF14AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A42DEC1BE57DD100EF14AA /* Main.storyboard */; };
 		E0A42DF01BE57DD100EF14AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A42DEF1BE57DD100EF14AA /* Assets.xcassets */; };
 		E0A42DF31BE57DD100EF14AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A42DF11BE57DD100EF14AA /* LaunchScreen.storyboard */; };
+		E0A42DFB1BE58ED300EF14AA /* PigLatinRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A42DFA1BE58ED300EF14AA /* PigLatinRules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E0A42DEF1BE57DD100EF14AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0A42DF21BE57DD100EF14AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0A42DF41BE57DD100EF14AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0A42DFA1BE58ED300EF14AA /* PigLatinRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PigLatinRules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E0A42DE81BE57DD100EF14AA /* AppDelegate.swift */,
 				E0A42DEA1BE57DD100EF14AA /* ViewController.swift */,
 				E0A42DEC1BE57DD100EF14AA /* Main.storyboard */,
+				E0A42DFA1BE58ED300EF14AA /* PigLatinRules.swift */,
 				E0A42DEF1BE57DD100EF14AA /* Assets.xcassets */,
 				E0A42DF11BE57DD100EF14AA /* LaunchScreen.storyboard */,
 				E0A42DF41BE57DD100EF14AA /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A42DEB1BE57DD100EF14AA /* ViewController.swift in Sources */,
+				E0A42DFB1BE58ED300EF14AA /* PigLatinRules.swift in Sources */,
 				E0A42DE91BE57DD100EF14AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

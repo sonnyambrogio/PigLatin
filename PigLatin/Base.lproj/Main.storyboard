@@ -1,25 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PigLatin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-71-GJU">
+                                <rect key="frame" x="128" y="269" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="translateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fym-up-N7x"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7LR-fS-gRG">
+                                <rect key="frame" x="40" y="133" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90588235855102539" green="0.92549020051956177" blue="0.92941176891326904" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-J2-wNX">
+                                <rect key="frame" x="16" y="326" width="288" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Output&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQv-in-Srr">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DQv-in-Srr" secondAttribute="bottom" id="deP-c0-BM1"/>
+                                    <constraint firstAttribute="trailing" secondItem="DQv-in-Srr" secondAttribute="trailing" id="fIZ-Hh-Z3e"/>
+                                    <constraint firstItem="DQv-in-Srr" firstAttribute="leading" secondItem="ZSt-J2-wNX" secondAttribute="leading" id="oDP-vz-4cY"/>
+                                    <constraint firstItem="DQv-in-Srr" firstAttribute="top" secondItem="ZSt-J2-wNX" secondAttribute="top" id="zrp-La-IHT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VeH-71-GJU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0cj-AD-8HF"/>
+                            <constraint firstItem="VeH-71-GJU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iem-n7-6JY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZSt-J2-wNX" secondAttribute="trailing" id="UGu-A4-Un6"/>
+                            <constraint firstItem="ZSt-J2-wNX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zhv-LI-dQL"/>
+                            <constraint firstItem="ZSt-J2-wNX" firstAttribute="top" secondItem="VeH-71-GJU" secondAttribute="bottom" constant="27" id="fac-Nb-cmO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textInputOutlet" destination="7LR-fS-gRG" id="ZUm-FN-ftX"/>
+                        <outlet property="translatedTextOutputLabel" destination="DQv-in-Srr" id="ace-N0-j7P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="256" y="418.89999999999998"/>
         </scene>
     </scenes>
 </document>
